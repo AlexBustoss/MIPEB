@@ -7,7 +7,7 @@ const mytextInput = document.getElementById('mytext');
 const responseTextarea = document.getElementById('response');
 const loader = document.getElementById('loader');
 
-const API_KEY = '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';
+const API_KEY = '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';
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
