@@ -16,19 +16,19 @@ const coffees = [
     link: "Productos/index.html"
   },
   {
-    name: "Reportes",
+    name: "Reporte Ventas",
     image: "images/reporte.jpg",
-    link: "Reportes/index.html"
+    link: "ReporteV/index.html"
+  },
+  {
+    name: "Reporte Gastos",
+    image: "images/apoyo.jpg",
+    link: "ReporteG/index.html"
   },
   {
     name: "Clientes",
     image: "images/clientes.jpg",
     link: "Clientes/index.html"
-  },
-  {
-    name: "Chat",
-    image: "images/apoyo.jpg",
-    link: "Chat/index.html"
   },
   {
     name: "Historial Ventas",
