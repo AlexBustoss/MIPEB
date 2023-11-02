@@ -211,11 +211,11 @@ body {
 
 
 .reporte .progreso.materia-prima {
-    background-color: #0f2874;  /* Un color para Materia Prima */
+    background-color: #273a73;  /* Un color para Materia Prima */
 }
 
 .reporte .progreso.operacion {
-    background-color: #192f71;  /* Un color para Operación */
+    background-color: #273a73;  /* Un color para Operación */
 }
 
 .reporte .progreso.nomina {
@@ -223,11 +223,11 @@ body {
 }
 
 .reporte .progreso.publicidad {
-    background-color: #354775;  /* Un color para Publicidad */
+    background-color: #273a73;  /* Un color para Publicidad */
 }
 
 .reporte .progreso.otro {
-    background-color: #435577;  /* Un color para Otro */
+    background-color: #273a73;  /* Un color para Otro */
 }
 
 /*Tabla historial de ventas*/
