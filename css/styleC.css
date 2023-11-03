@@ -270,8 +270,11 @@ tr:hover {
 
 @media only screen and (max-width: 600px) {
     body {
-        font-size: 16px; 
+        font-size: 16px;
     }
-
-    
+    input, select, textarea, button {
+        font-size: 16px; /* Ajustar según sea necesario */
+        padding: 15px;   /* Aumentar el relleno si es necesario */
+    }
+    /* Puedes añadir más ajustes aquí para otros elementos si es necesario */
 }
