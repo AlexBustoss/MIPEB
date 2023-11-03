@@ -1,4 +1,4 @@
-const staticDevCoffee = "MIPE-site-v2";
+const staticDevMipe = "MIPE-site-v3";
 const assets = [
   "/",
   "/index.html",
@@ -17,7 +17,7 @@ const assets = [
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
-    caches.open(staticDevCoffee).then(cache => {
+    caches.open(staticDevMipe).then(cache => {
       cache.addAll(assets);
     })
   );
