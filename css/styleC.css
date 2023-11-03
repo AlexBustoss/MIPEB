@@ -10,12 +10,15 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    
+    max-width: none;/* 600 */
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     background-color: #d6c8e841;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Aprovecha todo el ancho disponible */
+
 }
 
 .container header {
@@ -178,6 +181,8 @@ body {
     }
 }
 
+
+
 .ventasTotales {
     font-size: 1.5em;
     text-align: right;
@@ -260,4 +265,13 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Aquí puedes agregar otros estilos que ya tenías previamente */
+
+/* Reduce el tamaño de fuente para pantallas pequeñas */
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px; 
+    }
+
+    
+}
