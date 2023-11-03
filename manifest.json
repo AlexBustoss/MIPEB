@@ -1,7 +1,7 @@
 {
   "name": "MIPE",
   "short_name": "MIPE",
-  "start_url": "index.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#fdfdfd",
   "theme_color": "#db4938",
@@ -21,6 +21,11 @@
       "src": "/images/icons/icon-128x128.png",
       "type": "image/png",
       "sizes": "128x128"
+    },
+    {
+      "src": "/images/icons/icon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
     },
     {
       "src": "/images/icons/icon-152x152.png",
