@@ -1,19 +1,19 @@
 {
   "name": "MIPE",
   "short_name": "MIPE",
-  "start_url": "/MIPEv3/index.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#fdfdfd",
   "theme_color": "#db4938",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/MIPEv3/images/icons/icon-72x72.png",
+      "src": "/images/icons/icon-72x72.png",
       "type": "image/png",
       "sizes": "72x72"
     },
     {
-      "src": "/MIPEv3/images/icons/icon-96x96.png",
+      "src": "/images/icons/icon-96x96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
