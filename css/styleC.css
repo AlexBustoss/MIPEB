@@ -278,3 +278,15 @@ tr:hover {
     }
     /* Puedes añadir más ajustes aquí para otros elementos si es necesario */
 }
+
+.card--avatar {
+    width: 100%; /* Esto asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Esto permite que la altura de la imagen se ajuste a su proporción natural */
+    object-fit: contain; /* Esto hace que la imagen se escale dentro del contenedor sin cortarse */
+  }
+  
+  /* La media query ahora es opcional, solo si necesitas estilos diferentes para pantallas más pequeñas */
+  @media (max-width: 600px) {
+    /* Aquí puedes agregar estilos específicos para dispositivos móviles si es necesario */
+  }
+  
