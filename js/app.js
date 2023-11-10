@@ -41,7 +41,7 @@ const coffees = [
     link: "HistoriaG/index.html"
   },
   {
-    name: "Actualizar",
+    name: "Sobre Nosotros",
     image: "images/actualiza.jpg",
     link: "Actualizar/index.html"
   }
