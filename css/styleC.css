@@ -289,4 +289,31 @@ tr:hover {
   @media (max-width: 600px) {
     /* Aquí puedes agregar estilos específicos para dispositivos móviles si es necesario */
   }
-  
+
+  .social-media-section {
+    display: block; /* Cambio de flex a block */
+    padding: 20px;
+    background-color: #EBE0D5;
+}
+
+.social-column {
+    width: 100%; /* Cambio a 100% para que ocupe todo el ancho disponible */
+    margin-bottom: 20px; /* Agregar un margen inferior para separar las secciones de personas */
+}
+
+
+.social-column h3 {
+    margin-bottom: 10px;
+}
+
+.social-column a {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #333;
+    margin-right: 10px; /* Agrega margen a la derecha de cada icono */
+}
+
+
+.social-column i {
+    font-size: 50px; /* Ajusta el tamaño de los iconos */
+}

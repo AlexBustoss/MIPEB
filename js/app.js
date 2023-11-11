@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-const coffees = [
+const icons = [
   {
     name: "Ventas",
     image: "images/ventas.jpg",
@@ -46,9 +46,9 @@ const coffees = [
     link: "Actualizar/index.html"
   }
 ];
-const showCoffees = () => {
+const showIcon = () => {
   let output = "";
-  coffees.forEach(
+  icons.forEach(
     ({ name, image, link}) =>
       (output += `
               <div class="card">
@@ -61,7 +61,7 @@ const showCoffees = () => {
   container.innerHTML = output;
 };
 
-document.addEventListener("DOMContentLoaded", showCoffees);
+document.addEventListener("DOMContentLoaded", showIcon);
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
