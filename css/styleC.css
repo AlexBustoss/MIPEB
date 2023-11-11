@@ -289,9 +289,7 @@ tr:hover {
   @media (max-width: 600px) {
     /* Aquí puedes agregar estilos específicos para dispositivos móviles si es necesario */
   }
-<<<<<<< Updated upstream
-  
-=======
+
 
   .social-media-section {
     display: block; /* Cambio de flex a block */
@@ -321,4 +319,3 @@ tr:hover {
     font-size: 50px; /* Ajusta el tamaño de los iconos */
 }
 
->>>>>>> Stashed changes
