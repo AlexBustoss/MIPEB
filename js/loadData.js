@@ -7,26 +7,29 @@ window.onload = () => {
 
     const cargarProductos = (callback) => {
         formContainer.innerHTML = `
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Tipo de Unidades</th>
-                        <th>Comentarios</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    ${productos.map((producto, index) => `
+            <div class="table-container">
+                <table>
+                    <thead>
                         <tr>
-                            <td>${producto.nombre}</td>
-                            <td>${producto.tipoUnidades}</td>
-                            <td>${producto.comentarios}</td>
-                            <td>${callback ? callback(index) : ''}</td>
+                            <th>Nombre</th>
+                            <th>Tipo de Unidades</th>
+                            <th>Comentarios</th>
+                            <th></th>
                         </tr>
-                    `).join('')}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        ${productos.map((producto, index) => `
+                            <tr>
+                                <td>${producto.nombre}</td>
+                                <td>${producto.tipoUnidades}</td>
+                                <td>${producto.comentarios}</td>
+                                <td>${callback ? callback(index) : ''}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
+
         `;
     };
 
@@ -54,23 +57,26 @@ window.onload = () => {
         const altaForm = document.getElementById('altaForm');
         altaForm.addEventListener('submit', (e) => {
             e.preventDefault();
-
+        
             const nombre = document.getElementById('nombre').value;
             const tipoUnidades = document.getElementById('tipoUnidades').value;
             const comentarios = document.getElementById('comentarios').value;
-
+        
             // Verificar si el producto ya existe
             if (productos.some(producto => producto.nombre === nombre)) {
                 alert('El producto ya existe. Por favor, ingresa un nombre de producto diferente.');
                 return;
             }
-
+        
             productos.push({ nombre, tipoUnidades, comentarios });
             localStorage.setItem('productos', JSON.stringify(productos));
-
-            cargarProductos();
-            altaForm.reset();
+        
+            // Redirigir a la sección de consulta de productos
+            operationSelect.value = 'consulta'; // Cambia el valor del menú desplegable
+            cargarProductos(); // Carga la sección de consulta de productos
+            altaForm.reset(); // Opcional: Reinicia el formulario de alta
         });
+        
     };
 
     operationSelect.addEventListener('change', () => {

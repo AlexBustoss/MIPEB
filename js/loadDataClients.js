@@ -5,30 +5,32 @@ window.onload = () => {
 
     const cargarClientes = (callback) => {
         formContainer.innerHTML = `
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Teléfono</th>
-                        <th>Dirección</th>
-                        <th>Zona</th>
-                        <th>Comentarios</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    ${clientes.map((cliente, index) => `
+        <div class="table-container">
+                <table>
+                    <thead>
                         <tr>
-                            <td>${cliente.nombre}</td>
-                            <td>${cliente.telefono}</td>
-                            <td>${cliente.direccion}</td>
-                            <td>${cliente.zona}</td>
-                            <td>${cliente.comentarios}</td>
-                            <td>${callback ? callback(index) : ''}</td>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Dirección</th>
+                            <th>Zona</th>
+                            <th>Comentarios</th>
+                            <th></th>
                         </tr>
-                    `).join('')}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        ${clientes.map((cliente, index) => `
+                            <tr>
+                                <td>${cliente.nombre}</td>
+                                <td>${cliente.telefono}</td>
+                                <td>${cliente.direccion}</td>
+                                <td>${cliente.zona}</td>
+                                <td>${cliente.comentarios}</td>
+                                <td>${callback ? callback(index) : ''}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
         `;
     };
 
@@ -62,28 +64,31 @@ window.onload = () => {
         `;
 
         const altaForm = document.getElementById('altaForm');
-        altaForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+            altaForm.addEventListener('submit', (e) => {
+                e.preventDefault();
 
-            const nombre = document.getElementById('nombre').value;
+                const nombre = document.getElementById('nombre').value;
 
-            // Verificar si el cliente ya existe
-            if (clientes.some(cliente => cliente.nombre === nombre)) {
-                alert('El cliente ya existe. Por favor, ingresa un nombre de cliente diferente.');
-                return;
-            }
+                // Verificar si el cliente ya existe
+                if (clientes.some(cliente => cliente.nombre === nombre)) {
+                    alert('El cliente ya existe. Por favor, ingresa un nombre de cliente diferente.');
+                    return;
+                }
 
-            const telefono = document.getElementById('telefono').value;
-            const direccion = document.getElementById('direccion').value;
-            const zona = document.getElementById('zona').value;
-            const comentarios = document.getElementById('comentarios').value;
+                const telefono = document.getElementById('telefono').value;
+                const direccion = document.getElementById('direccion').value;
+                const zona = document.getElementById('zona').value;
+                const comentarios = document.getElementById('comentarios').value;
 
-            clientes.push({ nombre, telefono, direccion, zona, comentarios });
-            localStorage.setItem('clientes', JSON.stringify(clientes));
+                clientes.push({ nombre, telefono, direccion, zona, comentarios });
+                localStorage.setItem('clientes', JSON.stringify(clientes));
 
-            cargarClientes();
-            altaForm.reset();
-        });
+                // Cambia el valor del menú desplegable a 'consulta'
+                operationSelect.value = 'consulta';
+                cargarClientes(); // Carga la sección de consulta de clientes
+                altaForm.reset(); // Opcional: Reinicia el formulario de alta
+            });
+
     };
 
     operationSelect.addEventListener('change', () => {

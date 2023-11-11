@@ -118,7 +118,10 @@ body {
     border-radius: 5px;
 }
 
-.filtros,
+.filtros{
+
+    font-size: 1.2em;
+}
 .reporte {
     margin-bottom: 20px;
 }
@@ -127,6 +130,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: .9em;
 }
 
 .barra {
@@ -137,6 +141,8 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
     position: relative;
+    
+
 }
 
 .progreso {
@@ -241,7 +247,7 @@ body {
 }
 
 table {
-    width: 100%;
+    width: auto;
     border-collapse: collapse;
     margin-top: 20px;
 }
@@ -319,3 +325,6 @@ tr:hover {
     font-size: 50px; /* Ajusta el tamaño de los iconos */
 }
 
+p {
+    text-align: justify;
+}
