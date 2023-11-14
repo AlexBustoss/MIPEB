@@ -1,18 +1,18 @@
-const staticDevMipe = "MIPE-site-v3";
+const staticDevMipe = "MIPE-site";
 const assets = [
-  "/MIPEv3",
-  "/MIPEv3/index.html",
-  "/MIPEv3/css/style.css",
-  "/MIPEv3/js/app.js",
-  "/MIPEv3/images/opera.jpg",
-  "/MIPEv3/images/registro.jpg",
-  "/MIPEv3/images/reporte.jpg",
-  "/MIPEv3/images/clientes.jpg",
-  "/MIPEv3/images/apoyo.jpg",
-  "/MIPEv3/images/objetivo.jpg",
-  "/MIPEv3/images/motivo.jpg",
-  "/MIPEv3/images/info.jpg",
-  "/MIPEv3/images/actualiza.jpg"
+  "/MIPE",
+  "/MIPE/index.html",
+  "/MIPE/css/style.css",
+  "/MIPE/js/app.js",
+  "/MIPE/images/opera.jpg",
+  "/MIPE/images/registro.jpg",
+  "/MIPE/images/reporte.jpg",
+  "/MIPE/images/clientes.jpg",
+  "/MIPE/images/apoyo.jpg",
+  "/MIPE/images/objetivo.jpg",
+  "/MIPE/images/motivo.jpg",
+  "/MIPE/images/info.jpg",
+  "/MIPE/images/actualiza.jpg"
 ];
 
 self.addEventListener("install", installEvent => {
