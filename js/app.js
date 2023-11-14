@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", showIcon);
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
     navigator.serviceWorker
-      .register("/MIPEv3/serviceWorker.js")
+      .register("/MIPE/serviceWorker.js")
       .then(res => console.log("service worker registered"))
       .catch(err => console.log("service worker not registered", err));
   });
